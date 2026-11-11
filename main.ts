@@ -2,6 +2,7 @@
 // Make.fun requires the output file to be named entry.png, but identifies
 // PNG/JPEG by magic bytes. This repository carries a valid JPEG at that path.
 
+import { createHash } from 'node:crypto';
 import { copyFileSync, mkdirSync, readFileSync, statSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -114,4 +115,6 @@ const output = readFileSync(outputPath);
 if (!output.equals(source) || statSync(outputPath).size !== source.length) {
   fail('output differs from the submitted artwork');
 }
+const digest = createHash('sha256').update(output).digest('hex');
 console.log(`Wrote ${width}x${height} JPEG as entry.png (${source.length} bytes)`);
+console.log(`SHA-256 ${digest}`);
