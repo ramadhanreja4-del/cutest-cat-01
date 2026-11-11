@@ -4,7 +4,7 @@ A deterministic `program/v1` entry for Make.fun's Cutest Cat 01 competition.
 
 ## Artwork
 
-`entry.png` contains a valid 512×512 JPEG image. The competition identifies PNG/JPEG by their leading bytes and requires the output filename to remain `entry.png`. The cat is a soft pastel kitten with large bright eyes, a pink bow, heart pendant, rosy cheeks, paw pads, and a curled tail.
+`entry.png` contains a valid 300×300 JPEG image. The competition identifies PNG/JPEG by their leading bytes and requires the output filename to remain `entry.png`. The cat is a soft pastel kitten with large bright eyes, a pink bow, heart pendant, rosy cheeks, paw pads, and a curled tail.
 
 ## Run
 
